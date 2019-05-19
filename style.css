@@ -171,3 +171,24 @@ body {
   content: " ";
   background-color: #6cabdd;
 }
+
+#play {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#text_box {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    width: 30pc;
+    height: 5pc;
+    border: 3px;
+    border-color: #311149;
+    border-style: dashed;
+    font-size: 2pc;
+    text-align: center;
+    
+}

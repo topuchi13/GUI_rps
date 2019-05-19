@@ -40,7 +40,7 @@ function play (playerSelection, computerSelection) {
 
 // Asks for correct user input until it gets one
 
-function input_filter(){
+function player_choice(){
     var usr_inp = prompt("What's your sign?").toLowerCase();
     while (usr_inp !== "rock" && usr_inp !== "paper" && usr_inp !== "scissors"){
         usr_inp = prompt ("Wrong input, Your options are: rock, paper, scissors. Try again:").toLowerCase();
@@ -53,8 +53,8 @@ function input_filter(){
 function game(){
     var player = 0;
     var comp = 0;
-    function hbfbbfjtfjfhfbthfnhtftffcnjnfhncgfcjfgcnjc {
-        var result = play(input_filter(), computerPlay());
+    function hbfbbfjtfjfhfbthfnhtftffcnjnfhncgfcjfgcnjc() {
+        var result = play(player_choice(), computerPlay());
         console.log(result[1]);
         if (result[0] == "computer"){
             comp += 1;
