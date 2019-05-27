@@ -3,6 +3,7 @@ function computerPlay () {
     return (options[Math.floor(Math.random() * (3-0) + 0)]);
 }
 
+
 // Game logic
 
 function logic (a,b){
@@ -26,7 +27,7 @@ function logic (a,b){
 // Logs results to the console
 
 function play (playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+//    playerSelection = playerSelection.toLowerCase();
     if (logic(playerSelection, computerSelection) == "tie"){
         return ["tie","It's a tie"];
     }
@@ -38,22 +39,20 @@ function play (playerSelection, computerSelection) {
     }
 }
 
-// Asks for correct user input until it gets one
-
-function player_choice(){
-    var usr_inp = prompt("What's your sign?").toLowerCase();
-    while (usr_inp !== "rock" && usr_inp !== "paper" && usr_inp !== "scissors"){
-        usr_inp = prompt ("Wrong input, Your options are: rock, paper, scissors. Try again:").toLowerCase();
-    }
-        return (usr_inp);
+//function for quick score update;
+function score_update(player_score, comp_score){
+    score_pl.innerHTML = player_score;
+    com_score.innerHTML = comp_score;
 }
 
 // Main function
 
 function game(){
-    var player = 0;
+    var player = 2;
     var comp = 0;
-    function hbfbbfjtfjfhfbthfnhtftffcnjnfhncgfcjfgcnjc() {
+    score_update(player,comp);
+    function start() {
+        score_update(player,comp);
         var result = play(player_choice(), computerPlay());
         console.log(result[1]);
         if (result[0] == "computer"){
@@ -72,3 +71,13 @@ function game(){
     }
  
 }
+
+//DOM stuff
+const play_field = document.getElementById('text_box');
+const score_pl = document.getElementById('player_score');
+const score_pl = document.getElementById('com_score');
+
+const rock_btn = document.getElementById('rock');
+const paper_btn = document.getElementById('paper');
+const scissors_btn = document.getElementById('scissors');
+const play_btn = document.getElementById('play_btn')

@@ -13,9 +13,9 @@
                 <div class="scoreboard-outer">
                   <span class="player-name one">Player</span>
                   <div class="score-panel">
-                    <span class="score player1">0</span>
+                    <span class="score player1" id="player_score">0</span>
                     <span>:</span>
-                    <span class="score COM">0</span>
+                    <span class="score COM" id="com_score">0</span>
                   </div>
                   <span class="player-name two">COM</span>
                 </div>
@@ -23,12 +23,12 @@
         
               <div id="play">
                   
-                <button id="play_btn">Play!</button>
+                <button id="play_button" onclick="game()">Play!</button>
             
             </div>
 
-            <div style="display: flex; justify-content: center;">
-                    <span id="text_box">Push the Start button to play</span>
+            <div id = tbox_container style="display: flex; justify-content: center;">
+                    <span id="text_box" style="align-content: center">Push the Start button to play</span>
             </div>
             
 
@@ -36,7 +36,7 @@
 
             <button id="rock">Rock</button>
             <button id="paper">Paper</button>
-            <button id='Scissors'>Scissors</button>
+            <button id='scissors'>Scissors</button>
 
         </div>
 

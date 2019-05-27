@@ -179,10 +179,11 @@ body {
     margin-left: auto;
 }
 
-#text_box {
-    display: inline-flex;
+#tbox_container {
     align-items: center;
     margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
     width: 30pc;
     height: 5pc;
     border: 3px;
@@ -190,5 +191,4 @@ body {
     border-style: dashed;
     font-size: 2pc;
     text-align: center;
-    
 }
